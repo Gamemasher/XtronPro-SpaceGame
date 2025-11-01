@@ -15,7 +15,10 @@ Procedurally generated space exploration game for Ovobot Xtron Pro using MakeCod
 
 ## Getting Started
 1. Open [MakeCode Arcade](https://arcade.makecode.com/).
-2. Click **Import** → **Import URL** → **Upload file** and drag the contents of this folder, or copy/paste `main.py` into the web editor and add supporting files through the Explorer pane.
+2. Click **Import** and either:
+   - **Import URL** → paste this repo’s GitHub link (with `pxt.json` MakeCode fetches every module automatically).
+   - **Upload file** → drop a `.zip`/`.mkcd` archive of this folder.
+   - Start a blank project and add each `.py` file manually via the Explorer.
 3. Use the browser simulator for quick testing (`F5`).
 4. When ready, click **Download** → select the Ovobot Xtron Pro board (or generic MakeCode Arcade hardware profile) → save the generated `.uf2`.
 5. Put the Xtron Pro in bootloader mode, mount the USB drive, and drag the `.uf2` to flash.

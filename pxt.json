@@ -1,0 +1,18 @@
+﻿{
+  "name": "SpaceGame",
+  "description": "Procedural space exploration game for Xtron Pro (MakeCode Arcade Python).",
+  "dependencies": {
+    "device": "*"
+  },
+  "files": [
+    "main.py",
+    "galaxy.py",
+    "assets.py",
+    "gameplay.py",
+    "combat.py",
+    "planet.py",
+    "station.py"
+  ],
+  "preferredEditor": "python",
+  "target": "arcade"
+}

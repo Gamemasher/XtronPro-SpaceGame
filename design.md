@@ -84,6 +84,7 @@ SpaceGame/
   ├── combat.py        # space encounter logic
   ├── planet.py        # planet surface exploration loop
   ├── station.py       # space station interactions
+  ├── pxt.json         # MakeCode Arcade project manifest (for GitHub import)
   ├── settings.json    # MakeCode Arcade project metadata
   └── README.md        # build & flashing instructions
 ```
