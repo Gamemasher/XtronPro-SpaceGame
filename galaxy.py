@@ -1,4 +1,4 @@
-﻿# galaxy.py
+# galaxy.py
 # Deterministic galaxy and planet seeding utilities for MakeCode Arcade.
 
 GALAXY_SYSTEM_COUNT = 25
@@ -80,3 +80,4 @@ def _create_planet(system_index, planet_index, rng_state):
 def regenerate_system(galaxy_seed, system_index):
     rng_state = [_base_seed(galaxy_seed, system_index)]
     return _create_planet(system_index, 0, rng_state)
+

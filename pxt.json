@@ -14,5 +14,12 @@
     "station.py"
   ],
   "preferredEditor": "python",
-  "target": "arcade"
+  "target": "arcade",
+  "testFiles": [],
+  "supportedTargets": [
+    "arcade"
+  ],
+  "targetVersions": {
+    "arcade": "1.10.29"
+  }
 }

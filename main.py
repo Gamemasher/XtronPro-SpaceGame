@@ -1,4 +1,4 @@
-﻿# main.py
+# main.py
 # Entry point for the SpaceGame MakeCode Arcade project.
 
 import galaxy
@@ -303,3 +303,4 @@ def _transition_to_planet():
 
 _register_controls()
 start_new_galaxy(_generate_seed())
+

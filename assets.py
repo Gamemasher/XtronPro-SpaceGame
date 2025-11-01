@@ -1,4 +1,4 @@
-﻿# assets.py
+# assets.py
 # Helper routines for generating small sprite images and palettes.
 
 STAR_COLORS = {
@@ -46,3 +46,4 @@ def make_ship_icon():
     img.fill_rect(0, 4, 12, 4, 13)
     img.fill_rect(4, 4, 4, 8, 1)
     return img
+

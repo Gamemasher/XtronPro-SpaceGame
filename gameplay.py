@@ -1,4 +1,4 @@
-﻿# gameplay.py
+# gameplay.py
 # Scene coordinator tying main.py to combat, planet, and station modules.
 
 import combat

@@ -1,4 +1,4 @@
-﻿# combat.py
+# combat.py
 # Space encounter logic for SpaceGame.
 
 import assets
@@ -203,3 +203,4 @@ def _rand_range(rng_state, minimum, maximum):
 def _lcg_step(state):
     state[0] = (1103515245 * state[0] + 12345) & 0x7fffffff
     return state[0]
+

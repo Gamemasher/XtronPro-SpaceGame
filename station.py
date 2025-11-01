@@ -1,4 +1,4 @@
-﻿# station.py
+# station.py
 # Space station interactions for upgrades and refueling.
 
 STATION_TEXT_KIND = SpriteKind.create()
@@ -114,3 +114,4 @@ def _set_hud_text(state, text):
     if hud:
         hud.image.fill(0)
         hud.image.print(text, 1, 1, 1)
+
