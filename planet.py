@@ -34,7 +34,10 @@ def start_planet_scene(state):
 
 def cleanup_planet_scene(state):
     global _active_state
-    controller.move_sprite(None, 0, 0)
+    player = state.get('planet_player')
+    if player:
+        controller.move_sprite(player, 0, 0)
+        player.destroy()
     sprites.destroy_all_sprites_of_kind(PLANET_PLAYER_KIND)
     sprites.destroy_all_sprites_of_kind(PLANET_RESOURCE_KIND)
     sprites.destroy_all_sprites_of_kind(PLANET_ENEMY_KIND)

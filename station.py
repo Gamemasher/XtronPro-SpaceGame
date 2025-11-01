@@ -1,6 +1,8 @@
 ﻿# station.py
 # Space station interactions for upgrades and refueling.
 
+import textsprite
+
 STATION_OPTIONS = [
     {
         'name': 'Refuel (+30)',

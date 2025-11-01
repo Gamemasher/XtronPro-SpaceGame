@@ -4,6 +4,7 @@
 import galaxy
 import assets
 import gameplay
+import textsprite
 
 galaxy_scene = 0
 space_scene = 1
