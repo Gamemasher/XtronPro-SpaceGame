@@ -13,9 +13,9 @@
     "planet.py",
     "station.py"
   ],
+  "testFiles": [],
   "preferredEditor": "python",
   "target": "arcade",
-  "testFiles": [],
   "supportedTargets": [
     "arcade"
   ],
