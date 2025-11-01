@@ -1,0 +1,10 @@
+﻿{
+  "name": "SpaceGame",
+  "dependencies": {
+    "device": "*"
+  },
+  "description": "Procedurally generated space exploration game for Xtron Pro",
+  "license": "MIT",
+  "target": "arcade",
+  "preferredEditor": "python"
+}
