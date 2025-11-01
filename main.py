@@ -4,7 +4,6 @@
 import galaxy
 import assets
 import gameplay
-import textsprite
 
 galaxy_scene = 0
 space_scene = 1
@@ -13,6 +12,7 @@ station_scene = 3
 
 galaxy_star_kind = SpriteKind.create()
 galaxy_cursor_kind = SpriteKind.create()
+hud_text_kind = SpriteKind.create()
 
 game_state = {
     'scene': galaxy_scene,
@@ -141,17 +141,20 @@ def _update_cursor_position():
 
 def _ensure_hud_text():
     if game_state['hud_text'] is None:
-        hud = textsprite.create('', 1, 15)
+        hud = sprites.create(image.create(160, 10), hud_text_kind)
         hud.set_flag(SpriteFlag.RELATIVE_TO_CAMERA, True)
-        hud.top = 2
-        hud.left = 4
+        hud.top = 0
+        hud.left = 0
+        hud.z = 100
         game_state['hud_text'] = hud
+        _set_hud_text('')
 
 
 def _set_hud_text(text):
     hud = game_state['hud_text']
     if hud:
-        hud.set_text(text)
+        hud.image.fill(0)
+        hud.image.print(text, 1, 1, 1)
 
 
 def _refresh_galaxy_info():

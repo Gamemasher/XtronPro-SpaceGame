@@ -1,7 +1,7 @@
 ﻿# station.py
 # Space station interactions for upgrades and refueling.
 
-import textsprite
+STATION_TEXT_KIND = SpriteKind.create()
 
 STATION_OPTIONS = [
     {
@@ -86,24 +86,31 @@ def handle_direction(state, dx, dy):
 
 def _ensure_option_text(state):
     if state.get('station_text') is None:
-        label = textsprite.create('', 1, 15)
+        img = image.create(160, 48)
+        label = sprites.create(img, STATION_TEXT_KIND)
         label.set_flag(SpriteFlag.RELATIVE_TO_CAMERA, True)
-        label.left = 4
-        label.top = 40
+        label.left = 0
+        label.top = 20
+        label.z = 90
         state['station_text'] = label
 
 
 def _refresh_station_text(state):
     option = STATION_OPTIONS[state['station_index']]
     credits = state['player'].get('credits', 0)
-    msg = 'Station: {} ({} cr)\nCredits {}'.format(option['name'], option['cost'], credits)
     label = state.get('station_text')
     if label:
-        label.set_text(msg)
+        img = label.image
+        img.fill(0)
+        img.print('Station Services', 2, 2, 1)
+        img.print(option['name'], 2, 14, 1)
+        img.print('Cost {} cr'.format(option['cost']), 2, 26, 1)
+        img.print('Credits {}'.format(credits), 2, 38, 1)
     _set_hud_text(state, 'Use up/down to cycle, A to buy, B to depart')
 
 
 def _set_hud_text(state, text):
     hud = state.get('hud_text')
     if hud:
-        hud.set_text(text)
+        hud.image.fill(0)
+        hud.image.print(text, 1, 1, 1)

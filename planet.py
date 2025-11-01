@@ -169,7 +169,8 @@ def _update_hud(state):
 def _set_hud_text(state, text):
     hud = state.get('hud_text')
     if hud:
-        hud.set_text(text)
+        hud.image.fill(0)
+        hud.image.print(text, 1, 1, 1)
 
 
 def _rand_range(rng_state, minimum, maximum):
